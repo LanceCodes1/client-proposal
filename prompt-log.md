@@ -18,3 +18,10 @@ Important decisions only, one entry per milestone.
 - **Value:** about $25 a month to run, so it pays for itself if it saves one repair job a month. Confirm her real repair value in the conversation.
 
 ---
+
+**Tool:** Claude Code
+**Prompt:** Build the one-page proposal: header, proposal, pricing table, agreement with signature lines, and a pitch-video section, with sticky tabs, noindex metadata, and the portfolio's navy/orange/amber colors.
+**Why:** A page I can open in the meeting and walk through top to bottom, readable on a phone, reusable for the next client by editing only content/client.ts.
+**Result:** Single server-rendered page with no client JavaScript. Tabs are plain anchor links. Pricing uses two columns so it fits a phone. The video section shows "Video coming soon" while the link is "". "What I'll set up" shows as a bullet list for easier reading in the meeting.
+
+---

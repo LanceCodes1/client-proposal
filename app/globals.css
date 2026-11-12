@@ -1,26 +1,43 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+/* Same palette as the portfolio site so the proposal feels like part of one brand.
+   Each name becomes a Tailwind color, e.g. bg-ink, text-amber, border-line. */
+@theme {
+  --color-ink: #080a18; /* page background, near-black navy */
+  --color-surface: #10132a; /* cards and raised panels */
+  --color-text: #eef0fb; /* body text, ~17:1 contrast on ink */
+  --color-muted: #b4b8d4; /* secondary text, ~10:1 on ink */
+  --color-line: #262b4d; /* thin borders */
+  --color-sunset: #ff7a18; /* orange accent */
+  --color-amber: #ffb627; /* amber accent */
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Tab clicks glide to their section, unless the viewer has asked for less motion. */
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-ink);
+  color: var(--color-text);
+}
+
+/* Clear keyboard focus ring so tabs and links are easy to follow without a mouse. */
+:focus-visible {
+  outline: 2px solid var(--color-amber);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Orange-to-amber gradient text for the main title, matching the portfolio name. */
+.accent-text {
+  background-image: linear-gradient(90deg, var(--color-sunset), var(--color-amber));
+  background-clip: text;
+  color: transparent;
 }
