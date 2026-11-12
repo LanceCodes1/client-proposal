@@ -138,7 +138,7 @@ export const client = {
     id: "video",
     heading: "Pitch video",
     // Leave url as "" until the video is ready. The page then shows comingSoon instead of the button.
-    url: "",
+    url: "https://www.loom.com/share/0fd633f78d2f4ec9be2bf75b1ffbdce8",
     comingSoon: "Video coming soon",
     buttonLabel: "Watch the pitch video",
   },
